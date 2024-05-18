@@ -1,0 +1,154 @@
+body {
+  background-color: rgb(173, 114, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 30px;
+}
+
+.card {
+  background-color: rgb(255, 165, 231);
+  box-shadow: inset 2px 3px 11px #fcc9ee, 5px 5px 12px rgb(70, 1, 65);
+
+  width: 300px;
+  height: 500px;
+  padding: 20px;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  background-color: rgb(255, 224, 249);
+  box-shadow: inset 2px 3px 11px rgb(70, 1, 65), 5px 5px 12px #fcc9ee;
+
+  height: 15%;
+  width: 100%;
+  padding-top: 0px;
+
+  /* border-radius: 20px; */
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.display input {
+  background-color: transparent;
+  color: #f461cc;
+
+  width: 90%;
+
+  text-align: end;
+  font-size: 45px;
+
+  border: none;
+  outline: none;
+}
+
+.button {
+  height: 70%;
+  width: 100%;
+  padding-top: 30px;
+
+  display: flex;
+}
+
+.kiri {
+  background-color: rgb(255, 165, 231);
+
+  width: 70%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: top;
+
+  gap: 12px;
+  padding: 10px;
+}
+
+.tombol {
+  background-color: rgb(222, 41, 173);
+  box-shadow: inset 1px 2px 10px rgb(239, 124, 208), 0 1px 7px rgb(98, 50, 82);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+
+  font-size: large;
+  color: #f5e1f0;
+
+  border: none;
+  /* border-radius: 100%; */
+
+  width: 63px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.tombol-AC {
+  background-color: rgb(240, 0, 0);
+  box-shadow: inset 1px 2px 10px rgb(255, 106, 215), 0 1px 7px rgb(98, 50, 82);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+
+  font-size: large;
+  color: #f3d3ea;
+
+  border: none;
+  /* border-radius: 100%; */
+
+  width: 63px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.tombol:hover {
+  transform: scale(0.9);
+}
+
+.tombol-AC:hover {
+  transform: scale(0.9);
+}
+
+.kanan {
+  width: 25%;
+  height: 100%;
+
+  background-color: transparent;
+
+  /* width: 65%;
+  height: 100%; */
+
+  display: grid;
+  grid-template-columns: auto;
+  align-items: top;
+
+  gap: 12px;
+  padding: 10px;
+}
+
+.tombol-hasil {
+  grid-row: span 3;
+  background-color: rgb(222, 41, 173);
+  box-shadow: inset 1px 2px 10px rgb(255, 132, 222), 0 1px 7px rgb(98, 50, 82);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+
+  font-size: large;
+  color: #f5e1f0;
+
+  border: none;
+  /* border-radius: 100%; */
+
+  width: 63px;
+  height: 275px;
+
+  cursor: pointer;
+}
+
+.tombol-hasil:hover {
+  transform: scale(0.9);
+}

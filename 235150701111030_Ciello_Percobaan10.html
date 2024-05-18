@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <form class="display">
+        <input id="display" type="text" placeholder="0" disabled />
+      </form>
+      <section class="button">
+        <div class="kiri">
+          <button class="tombol" onclick="appendOperator('+')">+</button>
+          <button class="tombol" onclick="appendOperator('-')">-</button>
+          <button class="tombol" onclick="appendOperator('*')">x</button>
+          <script laguage="javaScript">
+            for (let index = 9; index >= 1; index--) {
+              document.write(`<button class="tombol" onclick="appendNumber(${index})">${index}</button>`);
+            }
+          </script>
+          <button class="tombol" onclick="appendNumber(0)">0</button>
+          <button class="tombol" onclick="appendNumber('.')">.</button>
+          <button class="tombol-AC" onclick="clearDisplay()">AC</button>
+        </div>
+        <div class="kanan">
+          <button class="tombol" onclick="appendOperator('/')">÷</button>
+          <button class="tombol-hasil" onclick="calculateResult()">=</button>
+          <!-- <button class="tombol"></button>
+          <button class="tombol"></button>
+          <button class="tombol"></button> -->
+        </div>
+      </section>
+    </main>
+    <script>
+      function appendNumber(number) {
+        const display = document.getElementById("display");
+        if (display.value === "0" && number !== ".") {
+          display.value = number;
+        } else {
+          display.value += number;
+        }
+      }
+
+      function appendOperator(operator) {
+        const display = document.getElementById("display");
+        if (!isNaN(display.value.slice(-1))) {
+          display.value += operator;
+        }
+      }
+
+      function clearDisplay() {
+        document.getElementById("display").value = "0";
+      }
+
+      function calculateResult() {
+        const display = document.getElementById("display");
+        try {
+          display.value = eval(display.value.replace("x", "*").replace("÷", "/"));
+        } catch (e) {
+          display.value = "Error";
+        }
+      }
+    </script>
+  </body>
+</html>
